@@ -9,7 +9,7 @@ on:
             description: Defining an inputm to workflow_dispatch
             default: false
 env:
-    MY_NAME="NICO"
+    MY_NAME: "NICO"
 jobs:
     echo-data:
         runs-on: ubuntu-latest
