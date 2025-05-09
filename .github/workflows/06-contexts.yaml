@@ -21,3 +21,4 @@ jobs:
               run: |
                 echo "Variable Name: ${{ vars.MY_VAR }}"
 
+run-name: My custom workflow run name - ${{ runner.os }}
