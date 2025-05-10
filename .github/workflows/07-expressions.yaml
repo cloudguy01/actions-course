@@ -3,7 +3,6 @@ run-name: 07 - Using Expressions | DEBUG - < ${{inputs.debug && 'ON' || 'OFF'}}>
 
 #Use interpolation above with conditionals
 on:
-    push:
     workflow_dispatch:
         inputs:
             debug:
