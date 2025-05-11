@@ -25,7 +25,6 @@ jobs:
               if: ${{cancelled()}}
               run: echo "I will print if the workflow has been cancelled."
     echo2:
-        needs: echo1
         runs-on: ubuntu-latest
         steps:
             - name: print something
