@@ -12,7 +12,7 @@ jobs:
         runs-on: ubuntu-latest
         defaults:
           run:
-            working-directory: 13-caching/react-app
+            working-directory: /home/nico/courses/actions/.github/workflows/13-caching/react-app
         steps:
             - name: Checkout code
               uses: actions/checkout@v4 # Investigate this action...
