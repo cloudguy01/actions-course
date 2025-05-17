@@ -1,0 +1,43 @@
+name: "Working with artifacts"
+run-name: "This workflow uses artifacts..."
+
+on:
+    workflow_dispatch: 
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: 14-artifacts #this default path applies to "run" commands only within below step blocks
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            
+            - name: Setup node
+              uses: actions/setup-node@v3
+              with:
+                node-version: "22.x"
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build code
+              run: npm run build
+            
+            - name: Upload artifacts
+              uses: actions/upload-artifact@v4
+              with: 
+                name: app
+                path: 14-artifacts/react-app/build
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download artifacts
+              uses: download-artifact@v4
+              with:
+                name: app
+                path: build
+            - name: Show folder structure
+              run: ls -R
+            
