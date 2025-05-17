@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         defaults:
             run:
-                working-directory: 14-artifacts #this default path applies to "run" commands only within below step blocks
+                working-directory: 14-artifacts/react-app #this default path applies to "run" commands only within below step blocks
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
