@@ -1,5 +1,5 @@
 name: Working with artifacts
-run-name: This workflow uses artifacts...
+run-name: This workflow uses artifacts
 
 on:
     workflow_dispatch: 
