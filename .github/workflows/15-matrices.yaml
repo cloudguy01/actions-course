@@ -1,0 +1,17 @@
+name: Working with matrices
+
+on:
+    workflow_dispatch: 
+
+jobs:
+    test-variations:
+        strategy:
+            matrix:
+                version: [18,20,22]
+                os: [ubuntu-latest,windows-latest]
+        runs-on: ${{ matrix.os }}
+        steps:
+            - uses: actions/setup-node@v4
+            with:
+                node-version: ${{ matrix.version }}
+                    
