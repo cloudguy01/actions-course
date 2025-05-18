@@ -17,4 +17,4 @@ jobs:
               uses: actions/setup-node@v3
             
             - name: Perform Some tests
-              run: echo ""Running tests on OS ${{matrix.os}} and NodeJS ${{matrix.node-version}}."
+              run: echo "Running tests on OS ${{matrix.os}} and NodeJS ${{matrix.node-version}}."
